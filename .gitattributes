@@ -1,0 +1,3 @@
+# Fix line endings
+*.sh text eol=lf
+*.conf text eol=lf
