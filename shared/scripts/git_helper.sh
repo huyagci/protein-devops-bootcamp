@@ -3,7 +3,7 @@
 #############################################
 # Script Name   : Git Helper                #
 # File          : git_helper.sh             #
-# Usage         : ./git_helper.sh           #
+# Usage         : githelper                 #
 # Created       : 01/06/2022                #
 # Author        : Hasan Umut Yagci          #
 # Email         : hasanumutyagci@gmail.com  #
