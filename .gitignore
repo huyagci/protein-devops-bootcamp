@@ -6,7 +6,7 @@ HELP.md
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-# IDE's #
+# IDEs #
 
 # Visual Studio Code
 .vscode/
