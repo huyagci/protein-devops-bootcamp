@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #############################################
-# Script Name   : Git Helper                #
-# File          : git_helper.sh             #
-# Usage         : githelper                 #
+# Script Name   : Git Buddy                 #
+# File          : gitbuddy.sh               #
+# Usage         : gitbuddy                  #
 # Created       : 01/06/2022                #
 # Author        : Hasan Umut Yagci          #
 # Email         : hasanumutyagci@gmail.com  #

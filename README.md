@@ -25,9 +25,9 @@
 
 1. [Overview](#notebook_with_decorative_cover-overview)
 2. [Features](#sparkles-features)
-   - [Bootstrap Script](#bootstrap-script)
-   - [Git Helper Script](#git-helper)
-   - [Build Helper Script](#build-helper)
+   - [Bootstrapper](#bootstrap-script)
+   - [Git Buddy](#git-buddy)
+   - [Build Expert](#build-expert)
 3. [Installation](#gear-installation)
    - [Automated](#automated)
    - [Manual](#manual)
@@ -38,11 +38,11 @@
 
 ### :notebook_with_decorative_cover: **Overview**
 
-This repository contains an assignment project developed under the [Patika.dev][@patika] & [Protein][@protein] DevOps Engineer Bootcamp. `bootstrap.sh` is an initializer script that sets up the machine as instructed. `git_helper.sh` is an auxiliary script to manage multiple git instances and was originally not a part of the assignment. `build_helper.sh` is the main script that is coded by the terms of the project.
+This repository contains an assignment project developed under the [Patika.dev][@patika] & [Protein][@protein] DevOps Engineer Bootcamp. **Bootstrapper** is an initializer script that sets up the machine as instructed. `Git Buddy` is an auxiliary script to manage multiple git instances and was originally not a part of the assignment. `Build Expert` is the main script that is coded by the terms of the project.
 
 ### :sparkles: **Features**
 
-#### _Bootstrap Script_
+#### _Bootstrapper Script_
 
 > - Sets the timezone of the machine as UTC+3 (Europe/Istanbul) and enables Network Time Protocol.
 > - Downloads the latest package information.
@@ -51,14 +51,22 @@ This repository contains an assignment project developed under the [Patika.dev][
 > - Sets the permissions of the script files.
 > - Defines system-wide aliases for the scripts for easy use.
 
-#### _Git Helper_
+&nbsp;
 
-> - The main goal of this script is to assist the `Build Helper Script` by managing multiple git repositories simultaneously.
+<p align="center"><img src="./res/img/gitbuddy.png" alt="View Counter"></a></p>
+
+#### _Git Buddy_
+
+> - The main goal of this script is to assist the `Build Expert` script by managing multiple git repositories simultaneously.
 > - Searches for all initialized git repositories under the project directory.
 > - Can terminate all git repositories at the same time.
 > - Can initialize git instances for all directories under the project directory simultaneously.
 
-#### _Build Helper_
+&nbsp;
+
+<p align="center"><img src="./res/img/buildexpert.png" alt="View Counter"></a></p>
+
+#### _Build Expert_
 
 > - Manages git and maven package manager to fulfill the tasks given by the user.
 > - Switches between branches and build the project depending on the user requests.
@@ -88,10 +96,10 @@ This repository contains an assignment project developed under the [Patika.dev][
 
 ### :wrench: **Usage**
 
-- Built-in aliases are `githelper` and `buildhelper`. You may execute the scripts with the aliases if you executed `bootstrap.sh` first.
+- Built-in aliases are `gitbuddy` and `buildexpert`. You may execute the scripts with the aliases if you executed `bootstrap.sh` first.
 - Optionally, you may call the scripts from any directory with an acceptable arguments that are stated below.
-- The target directory of _Git Helper_ scripts is `/opt/project` directory.
-- The target directory of _Build Helper_ scripts is `/opt/project/java` directory.
+- The target directory of _Git Buddy_ scripts is `/opt/project` directory.
+- The target directory of _Build Expert_ scripts is `/opt/project/java` directory.
 - You can change these settings by re-defining the `TARGET_DIR` variable within the scripts.
 
 ##### _Parameters_
