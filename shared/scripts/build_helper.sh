@@ -9,153 +9,248 @@
 # Email         : hasanumutyagci@gmail.com  #
 #############################################
 
-# Predefined Variables
+# Colors
+COFF='\033[0m'
+CRED='\033[1;31m'
+CGREEN='\033[0;32m'
+CYELLOW='\033[1;33m'
+CCYAN='\033[0;36m'
+CORANGE='\033[0;33m'
+CDGRAY='\033[1;30m'
+# Underlined 
+UORANGE='\033[4;33m'
+# Blinking
+BBLUE='\033[5;36m'
+
+# Current directory of the user.
 CURRENT_DIR=$(pwd)
+
+# Project directory.
 TARGET_DIR=/opt/project/java
 
-# CD to target directory if executed from another directory
+# Accepted compressed archive formats can be "zip", "tar.gz" and null. In case of null default "tar.gz" will be used.
+ACCEPTED_FORMATS=("" "zip" "tar.gz")
+
+# Change directory to target directory if the script executed from another directory.
 cd $TARGET_DIR
 
-BUILD="mvn package -Dmaven.test.skip=true"
+# Default state of maven build command. Test skipping is true.
+BUILD="mvn package -q -Dmaven.test.skip=true"
 
+# Usage message of the script.
 USAGE_MSG="
-    Usage: $(basename $0) [OPTION] [ARGUMENT]...
+Usage: $(basename $0) [OPTION] <ARGUMENT> ...
 
-    OPTIONS:    ARGUMENTS:         DESCRIPTION:
+OPTIONS:    ARGUMENTS:         DESCRIPTION:                             DEFAULT VALUE:
 
-    [ -b ]      [branch_name]      Branch must be provided. If not on the branch switch then buil
-    [ -c ]                         Cleans the target folder
-    [ -d ]      [true|false]       Enable|Disable debug mode. Default: DISABLED Must be taken from the user
-    [ -f ]      [zip|tar]          Compress format of the artifact. Must be zip or tar.gz. Else break.
-    [ -h ]                         Shows usage
-    [ -n ]      [new_branch]       Create a new branch
-    [ -p ]      [artifact_path]    Copy compressed artifacts to given path
-    [ -t ]      [true|false]       Run or skip tests
+[-b]        <branch_name>      Branch name to get the build from.       Current Branch
+[-f]        <zip|tar.gz>       Compress format of the artifact.         tar.gz
+[-p]        <artifact_path>    Output path of compressed artifacts.     Current Directory
+[-n]        <new_branch>       Creates a new branch if applied.
+
+[-q]        <true|false>       Enable or disable quiet mode.            Enabled
+[-d]        <true|false>       Enable or disable debug mode.            Disabled
+[-t]        <true|false>       Apply or skip tests.                     Skip
+
+[-c]                           Cleans the maven project if applied.
+[-h]                           Shows usage/help.
 "
 
+# Empty line after command execution.
+echo
+
+# Usage function to prompt usage message.
 usage() {
     echo "${USAGE_MSG}"
     exit 1
 }
 
-debug_mode() {
-    if [ -n "$OPTARG" ] && [ "${OPTARG}" == "true" ]; then BUILD+=" -X"; fi
-}
-
+# This command cleans the maven project in quiet mode by deleting the target directory.
 clean_maven() {
+    echo -e "${CCYAN}[INFO]${COFF} Cleaning the project..."
     echo $(mvn clean -q)
+    echo -e "${CGREEN}[SUCCESS]${COFF} Cleaning completed.\n"
+    exit 0
 }
 
-# Create a new branch (IF ARG IS GIVEN)
+# Adds "-X" to build command if specified.
+debug_mode() {
+    if [ -n "${OPTARG}" ] && [ "${OPTARG}" == "true" ]
+    then
+        BUILD+=" -X"
+        echo -e "${CCYAN}[INFO]${COFF} Debug mode is enabled."
+        sleep 1.5
+    fi
+}
+
+# Creates a new branch if argument is specified.
 new_branch() {
-    if [ -n "${OPTARG}" ]; then git branch ${OPTARG}; fi
+    if [ -n "${OPTARG}" ]
+    then
+        git branch ${OPTARG}
+        echo -e "${CYELLOW}[CAUTION]${COFF} New Branch: ${OPTARG}"
+    fi
 }
 
+# Changes the test skipping satete to false by changing the build command parameter to "-Dmaven.test.skip=false"
 tests() {
-    if [ "${OPTARG}" == true ]
+    if [ -n "${OPTARG}" ] && [ "${OPTARG}" == "true" ]
     then
         BUILD=$(echo $BUILD | sed "s/"-Dmaven.test.skip=true"/"-Dmaven.test.skip=false"/g")
+        echo -e "${CCYAN}[INFO]${COFF} Tests will be applied."
+        sleep 1.5
     fi 
 }
 
-build() {
-    if [ -z "$ARCHIVE_FORMAT" ] || ! [[ "$ARCHIVE_FORMAT" == "zip" || "$ARCHIVE_FORMAT" == "tar.gz" ]]
+quiet_mode() {
+    if [ -n "${OPTARG}" ] && [ "${OPTARG}" == "false" ]
     then
-        echo
-        echo "You must provide a valid archive format. Must be 'zip' or 'tar.gz'"
+        BUILD=$(echo $BUILD | sed "s/"-q"/""/g")
+        echo -e "${CCYAN}[INFO]${COFF} Quiet mode disabled."
+        sleep 1.5
+    fi 
+}
+
+# Main build function.
+build() {
+
+    # If archive format is not in accepted formats, warn the user and stop execution. 
+    if ! [[ "${ACCEPTED_FORMATS[*]}" =~ "${ARCHIVE_FORMAT}" ]]
+    then
+        echo -e "${CRED}[ERROR]${COFF} You must provide a valid format. Must be 'zip' or 'tar.gz"
         usage
         exit 1
     else
+        # Get the available git branches in target directory and save it as an array.
         BRANCH_LIST=( $(git branch | tr -d ' ,*') )
 
+        # Check the current branch in target directory.
         CURRENT_BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
+        # If branch name is not specified by "-b" flag accept current branch as selected branch for build.
         if [ -z "${SELECTED_BRANCH}" ]; then SELECTED_BRANCH=${CURRENT_BRANCH}; fi
 
-        if [[ "$SELECTED_BRANCH" == "main" || "$SELECTED_BRANCH" == "master" ]]
-        then
-            echo
-            echo "Warning!!! You are building on ${SELECTED_BRANCH} branch!"
-        fi
-
+        # Check if the selected branch is exists in branch list.
         if [[ "${BRANCH_LIST[*]}" =~ "${SELECTED_BRANCH}" ]]
         then
+            # Standart info message.
+            echo -e "${CCYAN}[INFO]${COFF} Selected Branch: ${SELECTED_BRANCH}"
+
+            # Warn the users if building from "main" or "master" branch.
+            if [[ "$SELECTED_BRANCH" == "main" || "$SELECTED_BRANCH" == "master" ]]
+            then
+                echo -e "${CORANGE}[WARNING]${COFF} You are building on ${UORANGE}${SELECTED_BRANCH}${COFF} branch!"
+                sleep 3
+            fi
+
+            # If selected branch is the current branch, continue to build and invoke compress function.
             if [ "${SELECTED_BRANCH}" == "${CURRENT_BRANCH}" ]
             then
+                echo -e "${CCYAN}[INFO]${COFF} Building..."
                 eval $BUILD
                 compress
             else
-                git switch ${SELECTED_BRANCH}
+                # If selected branch is not the current branch, switch branch first, build the project and invoke compress function.
+                git switch -q ${SELECTED_BRANCH}
+                echo -e "${CCYAN}[INFO]${COFF} Building..."
                 eval $BUILD
                 compress
             fi
         else
-            echo
-            echo "Requested branch does not exits!"
-            echo 'Add "-n "'$SELECTED_BRANCH'" flag if you want to build it on a new branch.'
+
+        # If the selected branch does not exists in branch list, warn the user about creating a new branch.
+            echo -e "${CRED}[ERROR]${COFF} Requested branch does not exists!"
+            echo -e "${CCYAN}[INFO]${COFF} Add '${BBLUE}-n $SELECTED_BRANCH${COFF}' argument if you want a build on a new branch."
             usage
-            # echo "SELECTED BRANCH IS NOT EXISTS... CREATING REQUESTED BRANCH..."
-            # git checkout -b ${SELECTED_BRANCH}
-            # echo "OUTPUT COMMAND:"
-            # eval $BUILD
-            # compress
-            echo
+            exit 1
         fi
     fi
 }
 
+# Compressed archive function.
 compress() {
-    # If an arg is given, set output dir of the archive. else archive in same dir
-    if [ -z "${OUTPUT_DIR}" ]
+
+    # Selection of archive format. Depending on given, or not given arguments.
+    case $ARCHIVE_FORMAT in
+
+        # If not provided, use "tar.gz" as default.
+        "")
+        ARCHIVE_FORMAT="tar.gz"
+        echo -e "${CCYAN}[INFO]${COFF} Archive Format: $ARCHIVE_FORMAT ${CDGRAY}(Not specified, using default)${COFF}"
+        ;;
+
+        # If provided, use the specified format.
+        "zip" | "tar.gz")
+        ARCHIVE_FORMAT=$ARCHIVE_FORMAT
+        echo -e "${CCYAN}[INFO]${COFF} Archive Format: $ARCHIVE_FORMAT"
+        ;;
+    esac
+    
+    # Check if "-p" argument is specified.
+    if [ -z "${ARTIFACT_PATH}" ]
     then
-        OUTPUT_DIR=${CURRENT_DIR}
-        echo
-        echo "Output directory is not specified. Using current directory."
-        echo $OUTPUT_DIR
-        echo
+        # If the "-p" argument is not specified, use the current directory as output directory and inform the user.
+        ARTIFACT_PATH=${CURRENT_DIR}
+        echo -e "${CCYAN}[INFO]${COFF} Output Directory: $CURRENT_DIR ${CDGRAY}(Not specified, using current)${COFF}"
     else
-        OUTPUT_DIR=${OUTPUT_DIR}
+        # If the "-p" argument is specified, set the output directory of the archive.
+        ARTIFACT_PATH=${ARTIFACT_PATH}
+        echo -e "${CCYAN}[INFO]${COFF} Output Directory: $ARTIFACT_PATH"
     fi
 
-    TARGET_FILE=$(find $TARGET_DIR/target/ -type f -name "*.jar" -or -name "*.war" )
+    # Find artifacts using ".jar" or ".war" files under target directory.
+    TARGET_FILE=$(find $TARGET_DIR/target/ -type f -name "*SNAPSHOT.jar" -or -name "*SNAPSHOT.war" )
 
+    # If "zip" format is requested;
     if [ "${ARCHIVE_FORMAT}" == "zip" ]
     then
-        zip -q -j ${OUTPUT_DIR}/${SELECTED_BRANCH}.${ARCHIVE_FORMAT} ${TARGET_FILE}
+        # Compress it using "zip" in quiet mode. "-j" flag provides it does not store directory names.
+        zip -q -j ${ARTIFACT_PATH}/${SELECTED_BRANCH}.${ARCHIVE_FORMAT} ${TARGET_FILE}
+        echo -e "${CCYAN}[INFO]${COFF} Archive File: ${SELECTED_BRANCH}.${ARCHIVE_FORMAT}"
     fi
 
+    # If "tar.gz" format is requested;
     if [ "${ARCHIVE_FORMAT}" == "tar.gz" ]
     then
-        tar -C $(dirname "${TARGET_FILE}") -Pczf ${OUTPUT_DIR}/${SELECTED_BRANCH}.${ARCHIVE_FORMAT} $(basename "${TARGET_FILE}")
+        #Compress it using "tar" utility. "-C" flag and "$(basename ${...})" provides changing the directory first then archive only the file.
+        tar -C $(dirname "${TARGET_FILE}") -Pczf ${ARTIFACT_PATH}/${SELECTED_BRANCH}.${ARCHIVE_FORMAT} $(basename "${TARGET_FILE}")
+        echo -e "${CCYAN}[INFO]${COFF} Archive File: ${SELECTED_BRANCH}.${ARCHIVE_FORMAT}"
     fi
 }
 
-while getopts ":b:d:f:n:p:t:ch" options
+# While loop and case block.
+
+# ":" sign before the flags gives control of the unspecified flags to case itself.
+# Therefore "illegal option" error will not be triggered.
+
+# ":" signs after the flags indicates that flags can take arguments.
+# "-c" and "-h" are the only flags that can be used without an argument.
+while getopts ":b:f:p:n:q:d:t:ch" options 
 do
     case "${options}" in
         b) SELECTED_BRANCH=${OPTARG};;
-        c) clean_maven;;
-        d) debug_mode;;
         f) ARCHIVE_FORMAT=${OPTARG};;
-        h) usage;;
+        p) ARTIFACT_PATH=${OPTARG};;
         n) new_branch;;
-        p) OUTPUT_DIR=${OPTARG};;
+        q) quiet_mode;;
+        d) debug_mode;;
         t) tests;;
-        ?)  echo
-            echo "Invalid Option: -${OPTARG}"
-            usage
-            ;;
+        c) clean="true";;
+        h) usage;;
+        ?) echo -e "${CRED}[ERROR]${COFF} Invalid Option: -${OPTARG}"; usage;;
     esac
 done
 
-# If -c opt is given clean maven target else get build
-if [[ "$1" == "-c" && "$1" -lt 1 ]]
+# If "-c" flag is specified, clean the maven project else start building.
+if [ ! $clean ]
 then
-    clean_maven
-else
-    # Get build
+    # Build the project.
     build
+    echo -e "${CGREEN}[SUCCESS]${COFF} Build completed.\n"
+else
+    # Clean the project.
+    clean_maven
 fi
 
-# CD to previous directory if executed from another directory
+# Change directory to previous directory if executed from another directory.
 cd - &>/dev/null
