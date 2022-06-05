@@ -53,8 +53,8 @@ sudo rm -f /tmp/jdk-18_linux-x64_bin.deb
 sudo rm -f /usr/apache-maven-3.8.5-bin.tar.gz
 
 # Set Git related configurations for easy use of the main script.
-sudo git config --system user.name "maven-builder"
-sudo git config --system user.email "maven-builder@bashscript.com"
+sudo git config --system user.name "gitbuddy"
+sudo git config --system user.email "gitbuddy@buildexpert.com"
 sudo git config --system --add safe.directory /opt/project/java
 sudo git config --global --add safe.directory /opt/project/java
 
