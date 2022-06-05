@@ -59,10 +59,18 @@ sudo git config --system --add safe.directory /opt/project/java
 sudo git config --global --add safe.directory /opt/project/java
 
 # Give execution permission to scripts.
-# chmod +x /opt/scripts/git_helper.sh
-# chmod +x /opt/scripts/build_helper.sh
+sudo chmod 777 /opt/scripts/bootstrap.sh
+sudo chmod 777 /opt/scripts/git_helper.sh
+sudo chmod 777 /opt/scripts/build_helper.sh
 
 # Set system-wide aliases to easy use of the scripts
-# Bootstrap
+sudo echo "# Protein DevOps Bootcamp - Week 2 Assignment Aliases" >> /etc/bash.bashrc
+
 # Git Helper
+sudo echo "alias githelper='/opt/scripts/git_helper.sh'" >> /etc/bash.bashrc
+
 # Build Helper
+sudo echo "alias buildhelper='/opt/scripts/build_helper.sh'" >> /etc/bash.bashrc
+
+# Activation
+source /etc/bash.bashrc
