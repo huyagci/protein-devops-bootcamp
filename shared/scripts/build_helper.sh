@@ -73,7 +73,7 @@ clean_maven() {
     exit 0
 }
 
-# Adds "-X" to build command if specified.
+# Adds "-X" to build command if true.
 debug_mode() {
     if [ -n "${OPTARG}" ] && [ "${OPTARG}" == "true" ]
     then
@@ -92,7 +92,7 @@ new_branch() {
     fi
 }
 
-# Changes the test skipping satete to false by changing the build command parameter to "-Dmaven.test.skip=false"
+# Changes the test skipping state to false by changing the build command parameter to "-Dmaven.test.skip=false"
 tests() {
     if [ -n "${OPTARG}" ] && [ "${OPTARG}" == "true" ]
     then
@@ -102,6 +102,7 @@ tests() {
     fi 
 }
 
+# Removes "-q" parameter from the build command if false.
 quiet_mode() {
     if [ -n "${OPTARG}" ] && [ "${OPTARG}" == "false" ]
     then
