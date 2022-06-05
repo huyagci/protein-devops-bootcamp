@@ -136,7 +136,7 @@ Project Samples     : /mnt/project
 ```
 
 <!-- View Counter -->
-<p align="right"><img src="https://komarev.com/ghpvc/?username=testing143&style=flat&label=Views&color=blue" alt="View Counter"></a></p>
+<p align="right"><img src="https://komarev.com/ghpvc/?username=week-2-assignment-huyagci&style=flat&label=Views&color=blue" alt="View Counter"></a></p>
 
 <!-- Footnotes -->
 
