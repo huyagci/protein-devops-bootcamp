@@ -15,7 +15,7 @@ CRED='\033[1;31m'
 CGREEN='\033[0;32m'
 CYELLOW='\033[1;33m'
 CCYAN='\033[0;36m'
-CORANGE='\033[0;33m'
+CPURPLE='\033[1;35m'
 
 # Target directory of this script.
 TARGET_DIR=/opt/project
@@ -106,7 +106,7 @@ do
                 ;;
             "Quit")
                 echo
-                echo -e "${CORANGE}Goodbye.${COFF}"
+                echo -e "${CPURPLE}Thank you for using Git Buddy! Goodbye!${COFF}"
                 echo
                 exit
                 ;;
