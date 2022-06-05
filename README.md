@@ -96,7 +96,7 @@ This repository contains an assignment project developed under the [Patika.dev][
 
 ### :wrench: **Usage**
 
-- Built-in aliases are `gitbuddy` and `buildexpert`. You may execute the scripts with the aliases if you executed `bootstrap.sh` first.
+- Built-in aliases are `gitbuddy` and `buildexpert`. You may execute them if you executed `bootstrap.sh` first.
 - Optionally, you may call the scripts from any directory with an acceptable arguments that are stated below.
 - The target directory of _Git Buddy_ scripts is `/opt/project` directory.
 - The target directory of _Build Expert_ scripts is `/opt/project/java` directory.
