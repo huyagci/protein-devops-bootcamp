@@ -25,7 +25,7 @@
 
 1. [Overview](#notebook_with_decorative_cover-overview)
 2. [Features](#sparkles-features)
-   - [Bootstrapper](#bootstrap-script)
+   - [Bootstrapper](#bootstrapper-script)
    - [Git Buddy](#git-buddy)
    - [Build Expert](#build-expert)
 3. [Installation](#gear-installation)
