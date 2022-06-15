@@ -1,5 +1,3 @@
-# Protein DevOps Engineer Bootcamp
-
 ## Project of the Third Week
 
 **_Built with;_**
