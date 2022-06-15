@@ -1,6 +1,10 @@
 # Project Files
 .vagrant/
-HELP.md
+
+# Aux files
+*.psd
+
+# Sample App Files
 **/target/
 !**/.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
