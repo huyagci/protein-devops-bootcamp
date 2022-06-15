@@ -25,7 +25,7 @@
 
 1. [Overview](#notebook_with_decorative_cover-overview)
 2. [Features](#sparkles-features)
-   - [Bootstrapper](#bootstrapper-script)
+   - [Bootstrapper](#bootstrapper)
    - [Git Buddy](#git-buddy)
    - [Build Expert](#build-expert)
 3. [Installation](#gear-installation)
@@ -42,7 +42,7 @@ This repository contains an assignment project developed under the [Patika.dev][
 
 ### :sparkles: **Features**
 
-#### _Bootstrapper Script_
+#### _Bootstrapper_
 
 > - Sets the timezone of the machine as UTC+3 (Europe/Istanbul) and enables Network Time Protocol.
 > - Downloads the latest package information.
