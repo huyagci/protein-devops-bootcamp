@@ -1,0 +1,9 @@
+# Aux Files
+.vagrant/
+**containerd/
+
+# Visual Studio Code
+.vscode/
+
+# Images
+*.png
