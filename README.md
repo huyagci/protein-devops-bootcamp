@@ -32,7 +32,7 @@
 > - Vagrant by HashiCorp
 
 <!-- View Counter -->
-<p align="right"><img src="https://komarev.com/ghpvc/?username=week-3-assignment-huyagci&style=flat&label=Views&color=blue" alt="View Counter"></a></p>
+<p align="right"><img src="https://komarev.com/ghpvc/?username=protein-devops-bootcamp&style=flat&label=Views&color=blue" alt="View Counter"></a></p>
 
 <!-- Badge Index -->
 
