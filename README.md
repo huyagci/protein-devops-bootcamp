@@ -67,9 +67,9 @@ _You may check out the submitted versions of all projects [here][@og-repo]._
 
 <!-- List of Projects -->
 
-[@sysward]: ./week-1-bash-scripting-huyagci
-[@buildexpert]: ./week-2-git-huyagci
-[@sailboat]: ./week-3-docker-huyagci
-[#sysward]: ./week-1-bash-scripting-huyagci/res/img/sysward-100px.png
-[#buildexpert]: ./week-2-git-huyagci/res/img/buildexpert-100px.png
-[#sailboat]: ./week-3-docker-huyagci/res/img/sailboat-100px.png
+[@sysward]: https://github.com/huyagci/sysward
+[@buildexpert]: https://github.com/huyagci/buildexpert
+[@sailboat]: https://github.com/huyagci/sailboat
+[#sysward]: https://raw.githubusercontent.com/huyagci/sysward/main/res/img/sysward-100px.png
+[#buildexpert]: https://raw.githubusercontent.com/huyagci/buildexpert/main/res/img/buildexpert-100px.png
+[#sailboat]: https://raw.githubusercontent.com/huyagci/sailboat/main/res/img/sailboat-100px.png
