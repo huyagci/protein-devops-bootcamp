@@ -4,25 +4,31 @@
 
 [![Linux][#linux]][@linux] [![Bash][#bash]][@bash] [![Docker][#docker]][@docker] [![Git][#git]][@git] [![VirtualBox][#virtualbox]][@virtualbox] [![Vagrant][#vagrant]][@vagrant]
 
+### :open_book: **Table of Contents**
+
+1. [About](#notebook-about)
+2. [List of Projects](#scroll-list-of-projects)
+   - [SysWard](#scroll-list-of-projects)
+   - [Build Expert](#scroll-list-of-projects)
+   - [Sailboat](#scroll-list-of-projects)
+3. [Used Technologies](#computer-used-technologies)
+4. [Submitted Assignments](#floppy_disk-submitted-assignments)
+
 ### :notebook: About
 
 - This repository contains all assignment projects made under the [Patika.dev][@patika] & [Protein][@protein] DevOps Engineer Bootcamp.
-
-- Each directory has its readme files which contain installation on usage information.
-
+- Each directory has its unique readme file which contains installation on usage information.
 - Sample projects are provided for testing purposes.
-
 - All projects are served with `Vagrantfile` so that you can test them in virtual environments without configurations.
-
 - Branding works were made with free tools. It does not possess any kind of trademark and it is been made for easy remembering only.
 
 ### :scroll: List of Projects
 
-| Week |                   Project                    | Keywords                                                           |
-| :--: | :------------------------------------------: | :----------------------------------------------------------------- |
-|  1   |       [![SysWard][#sysward]][@sysward]       | Virtualbox, Vagrant, Linux, Bash Scripting                         |
-|  2   | [![BuildExpert][#buildexpert]][@buildexpert] | Virtualbox, Vagrant, Linux, Bash Scripting, Git, Maven             |
-|  3   |     [![Sailboat][#sailboat]][@sailboat]      | Virtualbox, Vagrant, Linux, Bash Scripting, Docker, Docker Compose |
+| Week |                   Project                    | Keywords                                                            |
+| :--: | :------------------------------------------: | :------------------------------------------------------------------ |
+|  1   |       [![SysWard][#sysward]][@sysward]       | Virtualbox, Vagrant, Linux, Bash Scripting                          |
+|  2   | [![BuildExpert][#buildexpert]][@buildexpert] | Virtualbox, Vagrant, Linux, Bash Scripting, Git, Spring Boot, Maven |
+|  3   |     [![Sailboat][#sailboat]][@sailboat]      | Virtualbox, Vagrant, Linux, Bash Scripting, Docker, Docker Compose  |
 
 ### :computer: **Used Technologies**
 
