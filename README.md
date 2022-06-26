@@ -1,12 +1,8 @@
 # Protein DevOps Engineer Bootcamp
 
-&nbsp;
-
 **_Projects are built with;_**
 
 [![Linux][#linux]][@linux] [![Bash][#bash]][@bash] [![Docker][#docker]][@docker] [![Git][#git]][@git] [![VirtualBox][#virtualbox]][@virtualbox] [![Vagrant][#vagrant]][@vagrant]
-
-&nbsp;
 
 ### About
 
@@ -20,7 +16,13 @@
 
 - Branding works were made with free tools. It does not possess any kind of trademark and it is been made for easy remembering only.
 
-&nbsp;
+### List of Projects
+
+| Week |     Project     | Keywords                                                           |
+| :--: | :-------------: | :----------------------------------------------------------------- |
+|  1   |   ![#sysward]   | Virtualbox, Vagrant, Linux, Bash Scripting                         |
+|  2   | ![#buildexpert] | Virtualbox, Vagrant, Linux, Bash Scripting, Git, Maven             |
+|  3   |  ![#sailboat]   | Virtualbox, Vagrant, Linux, Bash Scripting, Docker, Docker Compose |
 
 ### :computer: **Used Technologies**
 
@@ -30,8 +32,6 @@
 > - Docker
 > - Oracle VM VirtualBox
 > - Vagrant by HashiCorp
-
-&nbsp;
 
 ### :floppy_disk: **Submitted Assignments**
 
@@ -61,6 +61,15 @@ _You may check out the submitted versions of all projects [here][@og-repo]._
 [@vagrant]: https://www.vagrantup.com/
 [@vagrant-download]: https://www.vagrantup.com/downloads/
 
-<!-- Original Assignmens -->
+<!-- Original Assignments -->
 
 [@og-repo]: https://github.com/orgs/Protein-DevOps-Engineer-Bootcamp/repositories?q=huyagci&type=all
+
+<!-- List of Projects -->
+
+[@sysward]: ./week-1-bash-scripting-huyagci
+[@buildexpert]: ./week-2-git-huyagci
+[@sailboat]: ./week-3-docker-huyagci
+[#sysward]: ./week-1-bash-scripting-huyagci/res/img/sysward-100p.png
+[#buildexpert]: ./week-2-git-huyagci/res/img/buildexpert-100p.png
+[#sailboat]: ./week-3-docker-huyagci/res/img/sailboat-100p.png
