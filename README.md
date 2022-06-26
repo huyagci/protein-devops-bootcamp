@@ -4,7 +4,7 @@
 
 [![Linux][#linux]][@linux] [![Bash][#bash]][@bash] [![Docker][#docker]][@docker] [![Git][#git]][@git] [![VirtualBox][#virtualbox]][@virtualbox] [![Vagrant][#vagrant]][@vagrant]
 
-### About
+### :notebook: About
 
 - This repository contains all assignment projects made under the [Patika.dev][@patika] & [Protein][@protein] DevOps Engineer Bootcamp.
 
@@ -16,7 +16,7 @@
 
 - Branding works were made with free tools. It does not possess any kind of trademark and it is been made for easy remembering only.
 
-### List of Projects
+### :scroll: List of Projects
 
 | Week |                   Project                    | Keywords                                                           |
 | :--: | :------------------------------------------: | :----------------------------------------------------------------- |
