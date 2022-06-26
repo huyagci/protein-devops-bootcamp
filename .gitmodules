@@ -4,3 +4,6 @@
 [submodule "week-2-git-huyagci"]
 	path = week-2-git-huyagci
 	url = https://github.com/huyagci/buildexpert
+[submodule "week-3-docker-huyagci"]
+	path = week-3-docker-huyagci
+	url = https://github.com/huyagci/sailboat
