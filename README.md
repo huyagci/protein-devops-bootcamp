@@ -70,6 +70,6 @@ _You may check out the submitted versions of all projects [here][@og-repo]._
 [@sysward]: ./week-1-bash-scripting-huyagci
 [@buildexpert]: ./week-2-git-huyagci
 [@sailboat]: ./week-3-docker-huyagci
-[#sysward]: ./week-1-bash-scripting-huyagci/res/img/sysward-100p.png
-[#buildexpert]: ./week-2-git-huyagci/res/img/buildexpert-100p.png
-[#sailboat]: ./week-3-docker-huyagci/res/img/sailboat-100p.png
+[#sysward]: ./week-1-bash-scripting-huyagci/res/img/sysward-100px.png
+[#buildexpert]: ./week-2-git-huyagci/res/img/buildexpert-100px.png
+[#sailboat]: ./week-3-docker-huyagci/res/img/sailboat-100px.png
