@@ -18,11 +18,11 @@
 
 ### List of Projects
 
-| Week |     Project     | Keywords                                                           |
-| :--: | :-------------: | :----------------------------------------------------------------- |
-|  1   |   ![#sysward]   | Virtualbox, Vagrant, Linux, Bash Scripting                         |
-|  2   | ![#buildexpert] | Virtualbox, Vagrant, Linux, Bash Scripting, Git, Maven             |
-|  3   |  ![#sailboat]   | Virtualbox, Vagrant, Linux, Bash Scripting, Docker, Docker Compose |
+| Week |                   Project                    | Keywords                                                           |
+| :--: | :------------------------------------------: | :----------------------------------------------------------------- |
+|  1   |       [![SysWard][#sysward]][@sysward]       | Virtualbox, Vagrant, Linux, Bash Scripting                         |
+|  2   | [![BuildExpert][#buildexpert]][@buildexpert] | Virtualbox, Vagrant, Linux, Bash Scripting, Git, Maven             |
+|  3   |     [![Sailboat][#sailboat]][@sailboat]      | Virtualbox, Vagrant, Linux, Bash Scripting, Docker, Docker Compose |
 
 ### :computer: **Used Technologies**
 
