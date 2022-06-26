@@ -31,6 +31,12 @@
 > - Oracle VM VirtualBox
 > - Vagrant by HashiCorp
 
+&nbsp;
+
+### :floppy_disk: **Submitted Assignments**
+
+_You may check out the submitted versions of all projects [here][@og-repo]._
+
 <!-- View Counter -->
 <p align="right"><img src="https://komarev.com/ghpvc/?username=protein-devops-bootcamp&style=flat&label=Views&color=blue" alt="View Counter"></a></p>
 
@@ -54,3 +60,7 @@
 [@virtualbox]: https://www.virtualbox.org/
 [@vagrant]: https://www.vagrantup.com/
 [@vagrant-download]: https://www.vagrantup.com/downloads/
+
+<!-- Original Assignmens -->
+
+[@og-repo]: https://github.com/orgs/Protein-DevOps-Engineer-Bootcamp/repositories?q=huyagci&type=all
