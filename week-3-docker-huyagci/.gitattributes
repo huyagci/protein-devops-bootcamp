@@ -1,5 +1,0 @@
-# Fix line endings
-*.sh text eol=lf
-*.cfg text eol=lf
-*.yaml text eol=lf
-Dockerfile text eol=lf
