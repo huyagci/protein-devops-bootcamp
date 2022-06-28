@@ -20,7 +20,7 @@
 - Each directory has its unique readme file which contains installation on usage information.
 - Sample projects are provided for testing purposes.
 - All projects are served with `Vagrantfile` so that you can test them in virtual environments without configurations.
-- Branding works were made with free tools. It does not possess any kind of trademark and it is been made for easy remembering only.
+- Branding works were made with free tools and it does not possess any trademark. It has been made for the projects to be easily remembered.
 
 ### :scroll: List of Projects
 
