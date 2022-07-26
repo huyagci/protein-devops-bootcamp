@@ -6,16 +6,16 @@
 
 ### :open_book: **Table of Contents**
 
-1. [About](#notebook-about)
-2. [List of Projects](#scroll-list-of-projects)
-   - [SysWard](#scroll-list-of-projects)
-   - [Build Expert](#scroll-list-of-projects)
-   - [Sailboat](#scroll-list-of-projects)
-   - [Automotion](#scroll-list-of-projects)
-3. [Used Technologies](#computer-used-technologies)
-4. [Submitted Assignments](#floppy_disk-submitted-assignments)
+1. [About](#notebook-about-)
+2. [List of Projects](#scroll-list-of-projects-)
+   - [SysWard](#scroll-list-of-projects-)
+   - [Build Expert](#scroll-list-of-projects-)
+   - [Sailboat](#scroll-list-of-projects-)
+   - [Automotion](#scroll-list-of-projects-)
+3. [Used Technologies](#computer-used-technologies-)
+4. [Submitted Assignments](#floppy_disk-submitted-assignments-)
 
-### :notebook: About
+### :notebook: About [🔝](#open_book-table-of-contents)
 
 - This repository contains all assignment projects made under the [Patika.dev][@patika] & [Protein][@protein] DevOps Engineer Bootcamp.
 - Each directory has its unique readme file which contains installation on usage information.
@@ -23,7 +23,7 @@
 - Most projects are served with `Vagrantfile` so that you can test them in virtual environments without configurations.
 - Branding works were made with free tools and it does not possess any trademark. It has been made for the projects to be easily remembered.
 
-### :scroll: List of Projects
+### :scroll: List of Projects [🔝](#open_book-table-of-contents)
 
 | Week |                   Project                    | Keywords                                                            |
 | :--: | :------------------------------------------: | :------------------------------------------------------------------ |
@@ -32,7 +32,7 @@
 |  3   |     [![Sailboat][#sailboat]][@sailboat]      | Virtualbox, Vagrant, Linux, Bash Scripting, Docker, Docker Compose  |
 | Last |  [![Automotion][#automotion]][@automotion]   | Alpine, Nginx, Docker, Terraform, AWS, Kubernetes, Gitlab CI/CD     |
 
-### :computer: **Used Technologies**
+### :computer: **Used Technologies** [🔝](#open_book-table-of-contents)
 
 > - Linux
 > - Bash Scripting
@@ -47,7 +47,7 @@
 > - Vagrant by HashiCorp
 > - Amazon Web Services
 
-### :floppy_disk: **Submitted Assignments**
+### :floppy_disk: **Submitted Assignments** [🔝](#open_book-table-of-contents)
 
 _You may check out the submitted versions of all projects [here][@og-repo]._
 
