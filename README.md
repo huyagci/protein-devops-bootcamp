@@ -11,6 +11,7 @@
    - [SysWard](#scroll-list-of-projects)
    - [Build Expert](#scroll-list-of-projects)
    - [Sailboat](#scroll-list-of-projects)
+   - [Automotion](#scroll-list-of-projects)
 3. [Used Technologies](#computer-used-technologies)
 4. [Submitted Assignments](#floppy_disk-submitted-assignments)
 
@@ -19,7 +20,7 @@
 - This repository contains all assignment projects made under the [Patika.dev][@patika] & [Protein][@protein] DevOps Engineer Bootcamp.
 - Each directory has its unique readme file which contains installation on usage information.
 - Sample projects are provided for testing purposes.
-- All projects are served with `Vagrantfile` so that you can test them in virtual environments without configurations.
+- Most projects are served with `Vagrantfile` so that you can test them in virtual environments without configurations.
 - Branding works were made with free tools and it does not possess any trademark. It has been made for the projects to be easily remembered.
 
 ### :scroll: List of Projects
@@ -29,15 +30,22 @@
 |  1   |       [![SysWard][#sysward]][@sysward]       | Virtualbox, Vagrant, Linux, Bash Scripting                          |
 |  2   | [![BuildExpert][#buildexpert]][@buildexpert] | Virtualbox, Vagrant, Linux, Bash Scripting, Git, Spring Boot, Maven |
 |  3   |     [![Sailboat][#sailboat]][@sailboat]      | Virtualbox, Vagrant, Linux, Bash Scripting, Docker, Docker Compose  |
+| Last |  [![Automotion][#automotion]][@automotion]   | Alpine, Nginx, Docker, Terraform, AWS, Kubernetes, Gitlab CI/CD     |
 
 ### :computer: **Used Technologies**
 
 > - Linux
 > - Bash Scripting
 > - Git SCM
-> - Docker
 > - Oracle VM VirtualBox
+> - Github Actions
+> - Gitlab CI/CD
+> - React.js
+> - Docker
+> - Kubernetes
+> - Terraform by HashiCorp
 > - Vagrant by HashiCorp
+> - Amazon Web Services
 
 ### :floppy_disk: **Submitted Assignments**
 
@@ -76,6 +84,8 @@ _You may check out the submitted versions of all projects [here][@og-repo]._
 [@sysward]: https://github.com/huyagci/sysward
 [@buildexpert]: https://github.com/huyagci/buildexpert
 [@sailboat]: https://github.com/huyagci/sailboat
+[@automotion]: https://github.com/huyagci/automotion
 [#sysward]: https://raw.githubusercontent.com/huyagci/sysward/main/res/img/sysward-100px.png
 [#buildexpert]: https://raw.githubusercontent.com/huyagci/buildexpert/main/res/img/buildexpert-100px.png
 [#sailboat]: https://raw.githubusercontent.com/huyagci/sailboat/main/res/img/sailboat-100px.png
+[#automotion]: https://raw.githubusercontent.com/huyagci/automotion/main/assets/img/automotion-100px.png
