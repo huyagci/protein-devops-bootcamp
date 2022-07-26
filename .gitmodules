@@ -7,3 +7,6 @@
 [submodule "week-3-docker-huyagci"]
 	path = week-3-docker-huyagci
 	url = https://github.com/huyagci/sailboat
+[submodule "week-last-final-project-huyagci"]
+	path = week-last-final-project-huyagci
+	url = https://github.com/huyagci/automotion.git
