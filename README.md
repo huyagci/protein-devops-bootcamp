@@ -88,4 +88,4 @@ _You may check out the submitted versions of all projects [here][@og-repo]._
 [#sysward]: https://raw.githubusercontent.com/huyagci/sysward/main/res/img/sysward-100px.png
 [#buildexpert]: https://raw.githubusercontent.com/huyagci/buildexpert/main/res/img/buildexpert-100px.png
 [#sailboat]: https://raw.githubusercontent.com/huyagci/sailboat/main/res/img/sailboat-100px.png
-[#automotion]: https://raw.githubusercontent.com/huyagci/automotion/main/assets/img/automotion-100px.png
+[#automotion]: https://raw.githubusercontent.com/huyagci/automotion/main/assets/images/automotion-100px.png
